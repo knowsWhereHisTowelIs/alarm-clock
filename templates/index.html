@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}All routes{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for route in routes %}
+    <li>
+        <a href="{{ route }}">{{ route }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
